@@ -1,0 +1,290 @@
+﻿@page
+@model RD_Reservatie11042021.Pages.RD_Side.Newcompany_registerModel
+@{
+    ViewData["Title"] = "Newcompany_register";
+    Layout = "~/Pages/Shared/_Layout.cshtml";
+}
+
+<h1>Nieuw bedrijf registreren</h1>
+
+<form>
+    <h3>Company gegevens</h3>
+    <div class="row">
+        <div class="col">
+            <input type="text" class="form-control" placeholder="Bedrijfsnaam" aria-label="Bedrijfsnaam">
+        </div>
+        <div class="col"></div>
+    </div>
+    <div class="row">
+        <div class="col">
+            <input type="text" class="form-control" placeholder="Btw Nr" aria-label="BtwNr">
+        </div>
+        <div class="col">
+            <input type="text" class="form-control" placeholder="Kvk Nr" aria-label="kvk Nr">
+        </div>
+    </div>
+
+    <h5>Adress gegevens</h5>
+    <div class="row">
+        <div class="col">
+            <input type="text" class="form-control" placeholder="Straat" aria-label="straat_domi">
+        </div>
+        <div class="col">
+            <input type="text" class="form-control" placeholder="Nr" aria-label="Nr_domi">
+        </div>
+        <div class="col">
+            <input type="text" class="form-control" placeholder="bijvoegsel" aria-label="bijvoegsel_domi">
+        </div>
+    </div>
+    <div class="row">
+        <div class="col">
+            <input type="text" class="form-control" placeholder="Postcode" aria-label="postcode_domi">
+        </div>
+        <div class="col">
+            <input type="text" class="form-control" placeholder="Gemeente" aria-label="gemeente_domi">
+        </div>
+        <div class="col">
+            <input type="text" class="form-control" placeholder="Land" aria-label="land_domi">
+        </div>
+    </div>
+
+    <h5>Facturatie adress</h5>
+    <div class="row">
+        <div class="col">
+            <input type="text" class="form-control" placeholder="Straat" aria-label="straat_fac">
+        </div>
+        <div class="col">
+            <input type="text" class="form-control" placeholder="Nr" aria-label="Nr_fac">
+        </div>
+        <div class="col">
+            <input type="text" class="form-control" placeholder="bijvoegsel" aria-label="bijvoegsel_fac">
+        </div>
+    </div>
+    <div class="row">
+        <div class="col">
+            <input type="text" class="form-control" placeholder="Postcode" aria-label="postcode_fac">
+        </div>
+        <div class="col">
+            <input type="text" class="form-control" placeholder="Gemeente" aria-label="gemeente_fac">
+        </div>
+        <div class="col">
+            <input type="text" class="form-control" placeholder="Land" aria-label="land_fac">
+        </div>
+    </div>
+
+    <h3>Betaalgegevens</h3>
+    <div class="row">
+        <div class="col">
+            <input class="form-check-input" type="radio" name="Betaalplan" value="Maandelijks" id="Radio_betaalPlan">
+            <label class="form-check-label" for="Radio_betaalPlan">
+                Maandelijks
+            </label>
+
+            <input class="form-check-input" type="radio" name="Betaalplan" value="Maandelijks" id="Radio_betaalPlan">
+            <label class="form-check-label" for="Radio_betaalPlan">
+                Jaarlijks (-10%)
+            </label>
+
+            <input class="form-check-input" type="radio" name="Betaalplan" value="Maandelijks" id="Radio_betaalPlan">
+            <label class="form-check-label" for="Radio_betaalPlan">
+                2 Jaarlijks (-25%)
+            </label>
+        </div>
+    </div>
+
+
+    <h5>Betaalmethode</h5>
+    <div class="row">
+        <div class="col">
+            <input class="form-check-input" type="radio" name="Betaalplan" value="overschrijving" id="Radio_betaalmethode">
+            <label class="form-check-label" for="Radio_betaalPlan">
+                Overschrijven
+            </label>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col">
+            <input class="form-check-input" type="radio" name="Betaalplan" value="Betaalopdracht" id="Radio_betaalmethode">
+            <label class="form-check-label" for="Radio_betaalPlan">
+                Betaalopdracht
+            </label>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col">
+            <input type="text" class="form-control" placeholder="RekeningNr" aria-label="rekeningNr_domi">
+        </div>
+        <div class="col">
+            <input type="text" class="form-control" placeholder="Rekeninghouder" aria-label="rek_houder_domi">
+        </div>
+    </div>
+    <div class="row">
+        <div class="col">
+            <input type="text" class="form-control" placeholder="Bic" aria-label="bic_domi">
+        </div>
+        <div class="col">
+            <input class="form-check-input" type="checkbox" value="Comfirm_Domi" id="comfirmDomi">
+            <label class="form-check-label" for="comfirmDomi">
+                Bevestig Domiciliering
+            </label>
+        </div>
+    </div>
+
+    <br />
+    
+    <h5>Plan Selectie</h5>
+    <div class="row">
+        <div class="col">
+            <input class="form-check-input" type="checkbox" value="Comfirm_Domi" id="comfirmDomi">
+            <label class="form-check-label" for="comfirmDomi">
+                Bevestig Domiciliering
+            </label>
+            <div class="row">
+                <div class="col">
+                    <input class="form-check-input" type="checkbox" value="Comfirm_Domi" id="comfirmDomi">
+                    <label class="form-check-label" for="comfirmDomi">
+                        Bevestig Domiciliering
+                    </label>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col">
+            <input type="text" class="form-control" placeholder="Postcode" aria-label="postcode_fac">
+        </div>
+        <div class="col">
+            <input type="text" class="form-control" placeholder="Gemeente" aria-label="gemeente_fac">
+        </div>
+        <div class="col">
+            <input type="text" class="form-control" placeholder="Land" aria-label="land_fac">
+        </div>
+    </div>
+
+    <h3>Company gegevens</h3>
+    <div class="row">
+        <div class="col">
+            <input type="text" class="form-control" placeholder="Bedrijfsnaam" aria-label="Bedrijfsnaam">
+        </div>
+        <div class="col"></div>
+    </div>
+    <div class="row">
+        <div class="col">
+            <input type="text" class="form-control" placeholder="Btw Nr" aria-label="BtwNr">
+        </div>
+        <div class="col">
+            <input type="text" class="form-control" placeholder="Kvk Nr" aria-label="kvk Nr">
+        </div>
+    </div>
+
+    <h5>Adress gegevens</h5>
+    <div class="row">
+        <div class="col">
+            <input type="text" class="form-control" placeholder="Straat" aria-label="straat_domi">
+        </div>
+        <div class="col">
+            <input type="text" class="form-control" placeholder="Nr" aria-label="Nr_domi">
+        </div>
+        <div class="col">
+            <input type="text" class="form-control" placeholder="bijvoegsel" aria-label="bijvoegsel_domi">
+        </div>
+    </div>
+    <div class="row">
+        <div class="col">
+            <input type="text" class="form-control" placeholder="Postcode" aria-label="postcode_domi">
+        </div>
+        <div class="col">
+            <input type="text" class="form-control" placeholder="Gemeente" aria-label="gemeente_domi">
+        </div>
+        <div class="col">
+            <input type="text" class="form-control" placeholder="Land" aria-label="land_domi">
+        </div>
+    </div>
+
+    <h5>Facturatie adress</h5>
+    <div class="row">
+        <div class="col">
+            <input type="text" class="form-control" placeholder="Straat" aria-label="straat_fac">
+        </div>
+        <div class="col">
+            <input type="text" class="form-control" placeholder="Nr" aria-label="Nr_fac">
+        </div>
+        <div class="col">
+            <input type="text" class="form-control" placeholder="bijvoegsel" aria-label="bijvoegsel_fac">
+        </div>
+    </div>
+    <div class="row">
+        <div class="col">
+            <input type="text" class="form-control" placeholder="Postcode" aria-label="postcode_fac">
+        </div>
+        <div class="col">
+            <input type="text" class="form-control" placeholder="Gemeente" aria-label="gemeente_fac">
+        </div>
+        <div class="col">
+            <input type="text" class="form-control" placeholder="Land" aria-label="land_fac">
+        </div>
+    </div>
+    <h3>Company gegevens</h3>
+    <div class="row">
+        <div class="col">
+            <input type="text" class="form-control" placeholder="Bedrijfsnaam" aria-label="Bedrijfsnaam">
+        </div>
+        <div class="col"></div>
+    </div>
+    <div class="row">
+        <div class="col">
+            <input type="text" class="form-control" placeholder="Btw Nr" aria-label="BtwNr">
+        </div>
+        <div class="col">
+            <input type="text" class="form-control" placeholder="Kvk Nr" aria-label="kvk Nr">
+        </div>
+    </div>
+
+    <h5>Adress gegevens</h5>
+    <div class="row">
+        <div class="col">
+            <input type="text" class="form-control" placeholder="Straat" aria-label="straat_domi">
+        </div>
+        <div class="col">
+            <input type="text" class="form-control" placeholder="Nr" aria-label="Nr_domi">
+        </div>
+        <div class="col">
+            <input type="text" class="form-control" placeholder="bijvoegsel" aria-label="bijvoegsel_domi">
+        </div>
+    </div>
+    <div class="row">
+        <div class="col">
+            <input type="text" class="form-control" placeholder="Postcode" aria-label="postcode_domi">
+        </div>
+        <div class="col">
+            <input type="text" class="form-control" placeholder="Gemeente" aria-label="gemeente_domi">
+        </div>
+        <div class="col">
+            <input type="text" class="form-control" placeholder="Land" aria-label="land_domi">
+        </div>
+    </div>
+
+    <h5>Facturatie adress</h5>
+    <div class="row">
+        <div class="col">
+            <input type="text" class="form-control" placeholder="Straat" aria-label="straat_fac">
+        </div>
+        <div class="col">
+            <input type="text" class="form-control" placeholder="Nr" aria-label="Nr_fac">
+        </div>
+        <div class="col">
+            <input type="text" class="form-control" placeholder="bijvoegsel" aria-label="bijvoegsel_fac">
+        </div>
+    </div>
+    <div class="row">
+        <div class="col">
+            <input type="text" class="form-control" placeholder="Postcode" aria-label="postcode_fac">
+        </div>
+        <div class="col">
+            <input type="text" class="form-control" placeholder="Gemeente" aria-label="gemeente_fac">
+        </div>
+        <div class="col">
+            <input type="text" class="form-control" placeholder="Land" aria-label="land_fac">
+        </div>
+    </div>
+</form>

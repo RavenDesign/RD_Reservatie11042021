@@ -1,0 +1,86 @@
+﻿<!DOCTYPE html>
+
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] - Reservatie Module</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/flatpickr/4.2.3/flatpickr.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/flatpickr/4.2.3/themes/default.css">
+
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.css" />
+    <link rel="stylesheet" href="~/css/site.css" />
+    <link rel="stylesheet" href="~/css/CardRadio.css" />
+
+    <style>
+        #containerForm {
+            width: 25%;
+            margin: 0px auto;
+        }
+
+        .outl-p {
+            margin: 10px;
+        }
+    </style>
+
+</head>
+<body>
+    <div id="containerForm">
+        @RenderBody()
+    </div>
+
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script src="~/lib/bootstrap/dist/js/bootstrap.js"></script>
+    <script src="~/js/site.js" asp-append-version="true"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/flatpickr/4.2.3/flatpickr.js"></script>
+    <script>
+        // #basicDate -> Restaurant module
+        $("#basicDate").flatpickr({
+            enableTime: false,
+            dateFormat: "D - d/m/Y",
+            locale: "nl",
+            minDate: "today",
+            "disable": [function (date) { return (date.getDay() === 0 || date.getDay() === 6); }],
+            "locale": { "firstDayOfWeek": 1 } // start week on Monday
+        });
+        // #EventDate -> Event module
+        $("#EventDate").flatpickr({
+            enableTime: false,
+            dateFormat: "D - d/m/Y",
+            locale: "nl",
+            minDate: "today",
+            "disable": [function (date) { return (date.getDay() === 0 || date.getDay() === 6); }],
+            "locale": { "firstDayOfWeek": 1 } // start week on Monday
+        });
+        // #HotelDate -> Hotel module
+        $("#HotelDate").flatpickr({
+            enableTime: false,
+            dateFormat: "d/m/Y",
+            locale: "nl",
+            minDate: "today",
+            mode: "range",
+            disable: [
+                function (date) {
+                    // disable every multiple of 5
+                    return !(date.getDate() % 5);
+                }
+            ],
+            weekNumber: true,
+            "disable": [function (date) { return (date.getDay() === 0 || date.getDay() === 6); }],
+            "locale": { "firstDayOfWeek": 1 } // start week on Monday
+        });
+        // #TakeOutDate -> Take-away module
+        $("#TakeOutDate").flatpickr({
+            enableTime: false,
+            dateFormat: "D - d/m/Y",
+            locale: "nl",
+            minDate: "today",
+            "disable": [function (date) { return (date.getDay() === 0 || date.getDay() === 6); }],
+            "locale": { "firstDayOfWeek": 1 } // start week on Monday
+        });
+    </script>
+
+    @await RenderSectionAsync("Scripts", required: false)
+</body>
+</html>
